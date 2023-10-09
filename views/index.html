@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/views/New-Myntra-Logo.png" heigh="7px" width="30px" type="image/x-icon">
+  <title>
+    Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra
+  </title>
+  <!-- links -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+    }
+    /* .links li:nth-child(2){
+      color:red;
+    } */
+
+    nav {
+      padding-top: 20px;
+      background: rgb(176, 81, 81);
+    }
+
+    body {}
+
+    main {
+      background: #f7f7f7;
+      cursor: pointer;
+
+    }
+
+    html {
+      background: #ffffff;
+      font-family: sans-serif;
+
+    }
+
+    nav {
+      background: #ffffff;
+      padding-top: 10px;
+      display: flex;
+      position: sticky;
+      padding: 1px 2vw 0px;
+    }
+
+
+    .col-lg-10 {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .left {
+      padding-top: 20px;
+      display: flex;
+    }
+
+    .logo {
+      height: 40px;
+      width: 70px;
+      margin-top: 9px;
+    }
+
+    .left ul {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    .left li a {
+
+      text-decoration: none;
+      flex-direction: row;
+      /* padding: 10px; */
+      color: black;
+      font-weight: bold;
+
+    }
+
+    .container {
+      /* overflow: hidden; */
+    }
+
+    .home {
+
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      padding-top: 15px;
+      width: 125px;
+      text-align: center;
+      font-family: sans-serif;
+      font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .home a {
+      -webkit-font-smoothing: antialiased;
+
+      color: black;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
+    }
+
+    .left li {
+      padding-top: 15px;
+      text-transform: uppercase;
+      list-style: none;
+      -webkit-font-smoothing: antialiased;
+      font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    sup {
+      font-size: 10px;
+      color: red;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+      padding-top: 20px;
+      margin-left: 100px;
+    }
+
+    input {
+      display: inline-block;
+      /* float: left; */
+      font-size: 14px;
+      width: 400px;
+      height: 20px;
+      line-height: 24px;
+      color: #696e79;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+      padding: 8px 10px 10px;
+      margin: 0;
+      outline: 1px whitesmoke;
+      border: 0px solid #b6b6ba;
+      border-radius: 0 4px 4px 0;
+      border-left: 0;
+      border-radius: 10px;
+      background: #f5f5f6;
+    }
+
+    .right input::placeholder {
+      text-indent: 10px;
+
+    }
+
+    .profile svg {
+      height: 25px;
+      width: 20px;
+      display: flex;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    h6 {
+      text-align: center;
+      font-size: 12px;
+      margin-left: 17px;
+    }
+
+    svg:hover {
+      transform: scale(1.7);
+      transition: 1.2s;
+      color: rgb(174, 238, 238);
+    }
+
+    /* header Compleate */
+    .img1 img {
+      height: 200px;
+
+    }
+
+    nav {
+      border-radius: 10px 10px;
+      box-shadow: 0px 3px 0px 0px rgb(221, 218, 217);
+    }
+
+    .srk {}
+
+    .ctnr2 {
+      height: 450px;
+      width: 100%;
+
+    }
+
+    .srk img {
+      width: 100%;
+      height: 400px;
+      object-fit: fit-content;
+      object-position: bottom;
+
+    }
+
+    .spcl,
+    .deal1 {
+      filter: contrast(2);
+      object-fit: cover;
+      width: 100%;
+      height: 50px;
+      backface-visibility: hidden;
+      mix-blend-mode: darken;
+
+    }
+
+    .coupons {
+      padding-bottom: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0%;
+      padding: 0%;
+      /* gap:40px; */
+
+    }
+
+    .coupons img {
+      /* 713 × 148 px */
+      height: 148px;
+      width: 650px;
+      margin-left: -10px;
+      outline: none;
+    }
+
+    .mens {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      /* background: #000; */
+      /* height: 250px; */
+      overflow: hidden;
+    }
+
+    .mens img {
+      /* height: 250px; */
+      object-fit: cover;
+      outline: 2px rgb(196, 194, 194) solid;
+
+    }
+
+    .box {
+
+      height: 250px;
+
+      width: 200px;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    .first img {
+      margin: 0%;
+      padding: 0%;
+      margin-left: 10px;
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+
+    }
+
+    .flex {
+      margin-top: -20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: safe;
+
+    }
+
+    .second {
+      height: 70px;
+      width: 100px;
+      object-fit: contain;
+    }
+
+    .price {
+      margin-top: -20px;
+      text-align: center;
+      margin-left: -20px;
+    }
+
+    .dealimages {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+
+    .dealimages img {
+      object-fit: cover;
+      width: 326px;
+      margin: 2px;
+      height: 428px;
+
+    }
+
+    /* @media only screen and (max-width: 600px) {
+    .dealimages{
+        display: grid;
+        grid-template-columns: 1fr ;
+        object-fit: cover;
+    width: 326px;
+
+    height:428px ;
+    }    
+} */
+    .dealimages img:hover {
+      transition: 0.7s;
+      transform: scale(1.1);
+      -webkit-box-shadow: 8px -20px 24px 0px rgb(160, 149, 142);
+      -moz-box-shadow: 8px -20px 24px 0px rgb(184, 164, 149);
+      box-shadow: 8px -20px 24px 0px rgb(180, 157, 140);
+    }
+
+    .rakshabndan h1 {
+      font-weight: 700;
+      font-size: 28.8px;
+      padding-bottom: 0px;
+      line-height: normal;
+      color: #3e4152;
+      font-style: normal;
+      letter-spacing: .19em;
+      font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .offer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .offer img {
+      margin: 0%;
+      width: 240px;
+      height: 470px;
+      object-fit: scale-down;
+    }
+
+    .boys h1 {
+      font-weight: 700;
+      font-size: 28.8px;
+      padding-bottom: 0px;
+      line-height: normal;
+      color: #3e4152;
+
+      font-style: normal;
+      letter-spacing: .19em;
+      font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .gandsru {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    }
+
+    .gandsru img {
+      width: 240px;
+      height: 300px;
+      margin: 15px;
+    }
+
+    .gandsru img:hover {
+
+      transition: 1s;
+      transform: scale(1.2);
+      -webkit-box-shadow: 8px -20px 24px 0px rgb(15, 11, 9);
+      -moz-box-shadow: 8px -20px 24px 0px rgb(24, 22, 20);
+      box-shadow: 8px -20px 24px 0px rgb(24, 20, 16);
+    }
+
+    .womens h1 {
+      font-weight: 700;
+      font-size: 28px;
+      padding-bottom: 0px;
+      line-height: normal;
+      color: #3e4152;
+      font-style: normal;
+      letter-spacing: .19em;
+      font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .CATEGORY {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    }
+
+    .CATEGORY img {
+      height: 250px;
+
+      width: 200px;
+      object-fit: contain;
+      object-position: right;
+      margin: 0%;
+      margin-right: -50px;
+    }
+
+    .btn {
+      background: #f7f7f7;
+      border: black 2px solid;
+      width: 200px;
+      height: 40px;
+      border-radius: 60px;
+      color: #f5f5f6;
+
+      text-align: center;
+      background: rgb(241, 115, 6);
+      background: linear-gradient(40deg, rgba(241, 115, 6, 1) 0%, rgba(247, 45, 253, 0.8015800070028012) 100%);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .center {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .boxing a {
+      color: #f5f5f6;
+      font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 19px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+
+    }
+
+    .links {
+      list-style: none;
+      text-align: start;
+      text-transform: capitalize;
+
+    }
+
+    .links h2 {
+      text-transform: uppercase;
+    }
+
+    .links li {
+      color: #3e4152;
+      font-size: 14px;
+      margin-bottom: .6rem;
+
+    }
+
+    .shifting {
+      margin-top: -60px;
+    }
+
+    .links h2 {
+      font-size: 12px;
+      font-weight: 700;
+
+    }
+
+    .foooter {
+      background: #f7f7f7;
+    }
+
+    .parent {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+
+      height: 80px;
+      width: 380px;
+
+    }
+
+    .child img {
+      height: 50px;
+      width: 140px;
+    }
+
+    .icons li {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .father {
+      display: flex;
+      display: flex;
+      align-items: center;
+
+
+    }
+
+    .son {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .son li i {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      /* Set the desired font size */
+      width: 40px;
+      /* Set the desired width */
+      height: 40px;
+      /* Set the desired height */
+      cursor: pointer;
+      border-radius: 40%;
+      transition: background-color 0.5s;
+    }
+
+    .son li i.bi-facebook:hover {
+      color: #f5f5f6;
+      transition: 1s;
+      background-color: #1877f2;
+      /* Facebook blue */
+    }
+
+    .son li i.bi-twitter:hover {
+      color: #f5f5f6;
+      transition: 1s;
+      background-color: #1da1f2;
+      /* Twitter light sky blue */
+    }
+
+    .son li i.bi-instagram:hover {
+      color: #f5f5f6;
+      transition: 1s;
+      background-color: #e519cd;
+      /* Instagram pink */
+    }
+
+    .son li i.bi-youtube:hover {
+      color: #f5f5f6;
+      transition: 1s;
+      background-color: #ff0000;
+      /* YouTube red */
+    }
+
+    .last {
+      display: block;
+    }
+
+    .last img {
+      position: relative;
+      float: left;
+
+      height: 50px;
+      width: 100px;
+    }
+
+    .last p {
+      margin-right: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <div class="col-lg-10">
+          <div class="row ">
+            <div class="left">
+              <img src="/views/New-Myntra-Logo.png" alt="" class="logo flex" />
+              <ul class="flex justify-center text-center">
+                <li><a hr,ef="">Men</a></li>
+                <li><a href="">Women</a></li>
+                <li><a href="">kids</a></li>
+                <div class="home"><a href="">Home & Living</a></div>
+                <li><a href="">beauty</a></li>
+                <li>
+                  <a href="">Studio<sup>New</sup></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="right flex">
+            <div class="col-lg-10">
+
+              <input type="text" name="search" id="search" placeholder="🔎 Search for products,brands and more" />
+
+              <div class="row profile">
+                <div class="col-lg-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="6" height="16" fill="currentColor" class="bi bi-person"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                  </svg>
+                  <h6>profile</h6>
+                </div>
+              </div>
+              <div class="row profile">
+                <div class="col-lg-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                  </svg>
+                  <h6>wishlist</h6>
+
+                </div>
+              </div>
+              <div class="row profile">
+                <div class="col-lg-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-handbag" viewBox="0 0 16 16">
+                    <path
+                      d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2zm3 4V3a3 3 0 1 0-6 0v2H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11zm-1 1v1.5a.5.5 0 0 0 1 0V6h1.639a.5.5 0 0 1 .494.426l1.028 6.851A1.5 1.5 0 0 1 12.678 15H3.322a1.5 1.5 0 0 1-1.483-1.723l1.028-6.851A.5.5 0 0 1 3.36 6H5v1.5a.5.5 0 1 0 1 0V6h4z" />
+                  </svg>
+                  <h6>bag</h6>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Nav -->
+
+  <!-- MAINNN -->
+  <main>
+    <section class="main bg-light">
+      <div class="container py-3 pb-0">
+        <div class="row">
+          <img draggable="false" src="/views/img1 2.jpeg" alt="">
+        </div>
+      </div>
+      <div class="container ctnr2 py-3 ">
+        <div class="row srk">
+          <img draggable="false" src="/views/img5.jpeg" alt="">
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <img draggable="false" class="spcl" src="/viewsmyimg/special offers.webp" alt="">
+        </div>
+      </div>
+
+      <!-- coupons -->
+      <div class="container justify-center">
+        <div class="row pb-1 coupons">
+          <div class=""><img src="/views/100off.webp" alt=""></div>
+          <div class=""><img src="/views/200rsoff.webp" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="deals py-2">
+      <div class="container">
+        <div class="row">
+          <img class="deal1" src="/views/deals.webp" alt="">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 dealimages">
+
+            <a href=""><img src="/views/dl1.webp" alt=""></a>
+            <a href=""><img src="/views/dl2.webp" alt=""></a>
+            <a href=""><img src="/views/dl3.webp" alt=""></a>
+            <a href=""><img src="/views/dl4.webp" alt=""></a>
+            <a href=""><img src="/views/dl5.webp" alt=""></a>
+            <a href=""><img src="/views/dl15.webp" alt=""></a>
+            <a href=""><img src="/views/dl16.webp" alt=""></a>
+            <a href=""><img src="/views/dl9.jpeg" alt=""></a>
+            <a href=""><img src="/views/dl8.webp" alt=""></a>
+            <a href=""><img src="/views/dl7.webp" alt=""></a>
+            <a href=""><img src="/views/dl9.jpeg" alt=""></a>
+            <a href=""><img src="/views/dl10.webp" alt=""></a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rakshabndan">
+      <div class="container py-4 pb-0">
+        <h1>RAKSHABANNDHAN GIFTS THIS WAY</h1>
+      </div>
+      <div class="container">
+        <div class="row offer">
+          <a href=""> <img src="/views/off1.webp" alt=""></a>
+          <a href=""> <img src="/views/off2.webp" alt=""></a>
+          <a href=""> <img src="/views/off3.jpeg" alt=""></a>
+          <a href=""> <img src="/views/off4.webp" alt=""></a>
+          <a href=""> <img src="/views/off5.webp" alt=""></a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container boys">
+        <h1>MENS</h1>
+      </div>
+      <div class="container ">
+        <div class="row ">
+          <div class="col-lg-8 gandsru">
+            <img src="/views/men1.webp" alt="">
+            <img src="/views/men2.webp" alt="">
+            <img src="/views/men3.webp" alt="">
+            <img src="/views/men4.webp" alt="">
+            <img src="/views/men5.webp" alt="">
+            <img src="/views/men6.webp" alt="">
+            <img src="/views/men1.webp" alt="">
+            <img src="/views/men11.avif" alt="">
+            <img style="filter:grayscale(2)" src="/views/men2.webp" alt="">
+            <img style="filter:grayscale(4)" src="/views/men4.webp" alt="">
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container py-4 womens">
+        <h1>SHOP BY CATEGORY</h1>
+        <div class="row CATEGORY">
+          <a href=""><img src="/views/lt2.webp" alt=""></a>
+          <a href=""><img src="/views/lt1.webp" alt=""></a>
+          <a href=""><img src="/views/lt3.webp" alt=""></a>
+          <a href=""><img src="/views/lt4.jpeg" alt=""></a>
+          <a href=""><img src="/views/lt6.webp" alt=""></a>
+          <a href=""><img src="/views/lt7.jpeg" alt=""></a>
+
+        </div>
+      </div>
+      <div class="container boxing py-3">
+        <div class="row center text-center justify-center">
+          <button class=" btn" type="button"><a href="/more.html">Show More</a></button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container boys py-5">
+        <h1>MEDAL WORTHY BRANDS TO BAG</h1>
+      </div>
+      <div class="container">
+        <div class="row ">
+
+          <marquee behavior="alternate" direction="right" scrollamount="30" quick>
+            <a href=""><img src="/views/dl2.webp" alt=""></a>
+            <a href=""><img src="/views/dl3.webp" alt=""></a>
+            <a href=""><img src="/views/dl4.webp" alt=""></a>
+            <a href=""><img src="/views/dl5.webp" alt=""></a>
+            <a href=""><img src="/views/dl15.webp" alt=""></a>
+            <a href=""><img src="/views/dl16.webp" alt=""></a>
+            <a href=""><img src="/views/dl9.jpeg" alt=""></a>
+            <a href=""><img src="/views/dl8.webp" alt=""></a>
+            <a href=""><img src="/views/dl7.webp" alt=""></a>
+            <a href=""><img src="/views/dl9.jpeg" alt=""></a>
+            <a href=""><img src="/views/dl10.webp" alt=""></a>
+          </marquee>
+
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- <div class="row py-1 vk1">
+<img src="/img4vk.avif" class="vk" alt="">
+</div> -->
+    <!-- <div class="container ">
+  <div class="row mens">
+    <div class="col-lg-2"><img src="/dr1.jpeg" alt=""></div>
+    <div class="col-lg-2"><img src="/dr2.jpeg" alt=""></div>
+    <div class="col-lg-2"><img src="/dr3.jpeg" alt=""></div>
+    <div class="col-lg-2"><img src="/dr4.jpeg" alt=""></div>
+    <div class="col-lg-2"><img src="/dr5.jpeg" alt=""></div>
+    <div class="col-lg-2"><img src="/dr6.jpeg" alt=""></div>
+  </div>
+</div> -->
+
+    <div class="foooter py-5">
+
+      <footer class="container">
+
+        <div class="row">
+          <div class="col-lg-2 links">
+            <ul class="links">
+              <h2 class="py-2">ONLINE SHOPPING</h2>
+              <a href="">
+                <li>MEN</li>
+              </a>
+              <a href="">
+                <li>WOMEN</li>
+              </a>
+              <a href="">
+                <li>KIDS</li>
+              </a>
+              <a href="">
+                <li>beauty</li>
+              </a>
+              <a href="">
+                <li>Giftbrands</li>
+              </a>
+              <a href="">
+                <li>Myntra insider</li>
+              </a>
+            </ul>
+
+
+          </div>
+          <div class="col-lg-2 links">
+            <ul class="links">
+              <h2 class="py-2"> Customer policies</h2>
+              <li>contact us</li>
+              <li>FAQ</li>
+              <li>T&C</li>
+              <li>Terms of Use</li>
+              <li>Shopping</li>
+              <li>cancellation</li>
+              <li>returns</li>
+              <li>privacy policy</li>
+            </ul>
+
+          </div>
+          <div class="col-lg-4 links">
+            <h2 class="py-1">EXPERIENCE MYNTRA APP ON MOBILE</h2>
+            <div class="parent">
+              <div class="child">
+                <img src="/views/andrioid.png" alt="">
+                <img src="/views/apple.png" alt="">
+              </div>
+            </div>
+            <div class="row py-2 links icons father">
+              <h2>KEEP IN TOUCH</h2>
+              <div class="col-lg-6 son">
+                <li><i class="bi bi-facebook"></i></li>
+                <li><i class="bi bi-twitter"></i></li>
+                <li><i class="bi bi-youtube"></i></li>
+                <li><i class="bi bi-instagram"></i></li>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3">
+            <div class="row last">
+              <img src="/views/orignal.png" alt="">
+              <p><strong>100% Original</strong>
+                guarantee for all products at <a style="color:black;" href="/index.html">myntra.com</a>
+              </p>
+            </div>
+            <div class="row last">
+              <img src="/views/14days.png" alt="">
+              <p><strong>Return within 14 days</strong>
+                of receiving your order
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="container shifting">
+      <div class="col-lg-4  links ">
+        <ul class="links">
+          <h2 class="">USEFULL LINKS</h2>
+          <li>Blog</li>
+          <li>Career</li>
+          <li>site Map</li>
+          <li>Corporate Information</li>
+          <li> Whitehat</li>
+        </ul>
+      </div>
+    </div>
+
+    </div>
+
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- copyright -->
+        <p></p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+<script src="index.js"></script>
+
+</html>
